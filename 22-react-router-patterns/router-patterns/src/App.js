@@ -1,6 +1,7 @@
 import Food from './Food';
 import Meal from './Meal';
 import FoodSearch from './FoodSearch'
+import NavBar from './NavBar'
 import './App.css';
 import { Route, Switch } from 'react-router-dom';
 
@@ -13,6 +14,7 @@ function App() {
 
 			{/* THIS VERSION USING RENDER IS LESS CLEAN BUT MORE EXPLICIT */}
 			{/* AND YOU CAN PASS IN YOUR OWN ADDITIONAL PROPS */}
+      <NavBar />
 			<Switch>
 				<Route exact path="/food/:name" render={(routeProps) => <Food {...routeProps} />} />
 				<Route exact path="/food/:foodName/drink/:drinkName" component={Meal} />
